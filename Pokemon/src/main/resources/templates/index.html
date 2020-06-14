@@ -1,0 +1,195 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Pokemon</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<link rel="stylesheet" href="css/main2.css" th:href="@{css/main2.css}" />
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	
+</head>
+<body class="is-preload">
+
+		<!-- Header -->
+	<header id="header">
+		<a class="logo">Pokemon</a>
+		<form th:action="@{/login?logout}" class="float-right" style="margin-right: 30px;">
+			<a ><button style="background-color: black; height: 50px; margin-top: 30px;">
+      			<i class="material-icons">&#xe879;</i>
+      			<span class="glyphicon glyphicon-log-in">Logout</span>
+      		</button></a>
+		</form>
+	</header>
+
+        <!-- Nav -->
+            <nav id="menu">
+                <ul class="links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Elements</a></li>
+                    <li><a href="#">Generic</a></li>
+                </ul>
+            </nav>
+	</header>
+
+		<!-- Banner -->
+			<section id="banner">
+				
+			</section>
+
+		<!-- Highlights -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>BIENVENIDOS</h2>
+						<p>Hola entrenadores, esta página web está hecha para aportar sugerencias, equipos y de,ás cosas del ambito de pokemon. Además podéis 
+						participar en competicion de  8ª generación la cual tendrá su sede en la región de Galar</p>
+					</header>
+					<div class="highlights">
+						<section>
+							<div class="content">
+								<header>
+									<a th:href="@{/profile}" class="icon fa-vcard-o"><span class="label">Icon</span></a>
+									<h3>Perfil</h3>
+								</header>
+								<p>Aquí podrás acceder a una información detallada de tu perfil de jugador.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a th:href="@{/pokemon/listPokemon}" class="icon fa-floppy-o"><span class="label">Icon</span></a>
+									<h3>Pokédex</h3>
+								</header>
+								<p>Lista de los pokemons de la generación.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fas fa-users"><span class="label">Icon</span></a>
+									<h3>Entrenadores</h3>
+								</header>
+								<p>Mira todos los entrenadores que están registrados.</p>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<header>
+									<a href="#" class="icon fas fa-list-ol"><span class="label">Icon</span></a>
+									<h3>Clasificación</h3>
+								</header>
+								<p>Reisa la clasificación de nuestra página. ¿Quién sabe? Quizás estés entre los mejores entrenadores.</p>
+							</div>
+						</section>
+						 
+						<section>
+							<div class="content">
+								<header>
+									<a th:href="@{/crud}" class="icon fa-qrcode"><span class="label">Icon</span></a>
+									<h3>CRUD</h3>
+								</header>
+							</div>
+						</section>
+					</div>
+				</div> 
+			</section>
+
+		<!-- CTA -->
+			<section id="cta" class="wrapper">
+				<div class="inner">
+					<h2>Gracias por ver esta web</h2>
+					<p> Aplicación creada por David Reyes Mangano</p>
+				</div>
+			</section>
+
+		<!-- Testimonials -->
+			<section class="wrapper">
+				<div class="inner">
+					<header class="special">
+						<h2>Mejores entrenadores</h2>
+						</header>
+					<div class="testimonials">
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<img src="images/azul.png" alt="" />
+									</div>
+									<p class="credit">- <strong>Azul</strong> <span>Región - Kanto.</span></p>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<img src="images/alain.jpg" alt="" />
+									</div>
+									<p class="credit">- <strong>Alain</strong> <span>Región - Kalos.</span></p>
+								</div>
+							</div>
+						</section>
+						<section>
+							<div class="content">
+								<blockquote>
+									<p>Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus.</p>
+								</blockquote>
+								<div class="author">
+									<div class="image">
+										<img src="images/red.jpg" alt="" />
+									</div>
+									<p class="credit">- <strong>Azul</strong> <span>Región - Kanto.</span></p>
+								</div>
+							</div>
+						</section>
+					</div>
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<div class="content">
+						
+						<section>
+							<h4>Apoyame con un follow</h4>
+							<ul class="alt">
+								<li><a href="#">Sigueme en Twitter para más webs.</a></li>
+								<li><a href="#">Sigueme en Facebook.</a></li>
+								<li><a href="#">Sigueme en Instagram.</a></li>
+								<li><a href="#">Mira más contenido en GitHub.</a></li>
+							</ul>
+						</section>
+						<section>
+							<h4>Redes sociales <h4>
+							<ul class="plain">
+								<li><a href="https://twitter.com/Dareyma7"><i class="icon fa-twitter">&nbsp;</i>Twitter</a></li>
+								<li><a href="#"><i class="icon fa-facebook">&nbsp;</i>Facebook</a></li>
+								<li><a href="#"><i class="icon fa-instagram">&nbsp;</i>Instagram</a></li>
+								<li><a href="#"><i class="icon fa-github">&nbsp;</i>Github</a></li>
+							</ul>
+						</section>
+					</div>
+					<div class="copyright">
+						&copy; Odio <a href="https://unsplash.co">Java</a>, a más no <a href="https://coverr.co">poder</a>.
+					</div>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="js/jquery.min.js" th:src="@{js/jquery.min.js}"></script>
+			<script src="js/browser.min.js" th:src="@{js/browser.min.js}"></script>
+			<script src="js/breakpoints.min.js" th:src="@{js/breakpoints.min.js}"></script>
+			<script src="js/util.js" th:src="@{js/util.js}"></script>
+			<script src="js/main.js" th:src="@{js/main.js}"></script>
+	</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Bootstrap Order Details Table with Search Filter</title>
+	
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="/static/css/crud.css" th:href="@{/css/crud.css}">
+	
+</head>
+<body>
+	<header id="header" style="height: 50px;">
+		<a th:href="@{/crud}" ><i class="material-icons">&#xe5c4;</i><span style="font-size: 20px; margin-button: 15px;"> Atrás </span></a>
+		<a class="logo" th:href="@{/}" style="font-size: 20px; margin-top: 15px;">Pokemon</a>
+		
+		<form th:action="@{/login?logout}" class="float-right" style="margin-right: 30px;">
+        	<a ><button style="background-color: black;"><span class="glyphicon glyphicon-log-in"></span>Logout</button> </a>
+		</form>
+	</header>
+	
+	<div  class="page-wrapper bg-gra-03 p-t-45">
+    <div class="container card-5" style="margin-top:75px;">
+        <div class="table-wrapper">
+            <div class="table-title card-heading">
+                <div class="row">
+                    <div class="col-sm-4">
+						<h2 class="title">Detalles competicion </h2>
+					</div>
+					<div class="col-sm-8 title" style="margin-left: -15px;">						
+						<a th:href="@{/competicion/create}" class="btn btn-primary"><i class="material-icons">&#xE147;</i> <span>Añadir competición</span></a>
+						<a href="#" class="btn btn-info"><i class="material-icons">&#xE24D;</i> <span>Export to Excel</span></a>
+					</div>
+                </div>
+            </div>
+			
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre</th>
+						<th>fecha</th>
+						<th>lugar</th>						
+                        <th>options</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each= "competicion: ${competiciones}">
+                        <td th:text="${competicion.id}"></td>
+                        <td th:text="${competicion.nombre}"></td>
+						<td th:text="${competicion.fecha}"></td>
+                        <td th:text="${competicion.lugar}"></td>
+						<td>
+						<a class="settings" title="Settings" data-toggle="tooltip" th:href="@{/competicion/edit(id=${competicion.id})}">
+							<i class="material-icons">&#xE8B8;</i>
+						</a>
+							
+							<form th:action="@{/competicion/delete(id=${competicion.id})}" method="post" th:object="${competicion}">
+								<button class="delete" title="Delete" data-toggle="tooltip">
+									<i class="material-icons">&#xE5C9;</i>
+								</button>
+							</form> 
+						</td>
+						
+                    </tr>
+                </tbody>
+            </table>
+			<div class="clearfix">
+                <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                <ul class="pagination">
+                    <li class="page-item disabled"><a href="#">Previous</a></li>
+                    <li class="page-item"><a href="#" class="page-link">1</a></li>
+                    <li class="page-item"><a href="#" class="page-link">2</a></li>
+                    <li class="page-item"><a href="#" class="page-link">3</a></li>
+                    <li class="page-item active"><a href="#" class="page-link">4</a></li>
+                    <li class="page-item"><a href="#" class="page-link">5</a></li>
+					<li class="page-item"><a href="#" class="page-link">6</a></li>
+					<li class="page-item"><a href="#" class="page-link">7</a></li>
+                    <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>  
+    </div>   
+</body>
+</html>                                		                            
